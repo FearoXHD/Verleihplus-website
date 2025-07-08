@@ -1,16 +1,27 @@
-<div class="container py-5 text-center" data-aos="fade-up">
-  <h2 class="mb-4 my-5">Unsere Angebote</h2>
+<div class="container my-5">
+  <h2 class="text-center mb-4 fw-bold">Unser Anhänger</h2>
+
   <div class="row justify-content-center">
-    <div class="col-md-4 mb-3" *ngFor="let angebot of angebote">
-      <div class="card h-100">
-        <img [src]="angebot.image" class="card-img-top" [alt]="angebot.title" style="object-fit: cover; height: 200px;">
-        <div class="card-body">
-          <h5 class="card-title">{{ angebot.title }}</h5>
-          <p class="card-text">{{ angebot.description }}</p>
-          <p class="card-text"><strong>Ab {{ angebot.pricePerDay | currency:'EUR':'symbol' }} / Tag</strong></p>
-          <button class="btn btn-danger btn-lg mt-3" (click)="scrollTo('angebote')">Jetzt Anfragen</button>
+    <div 
+      class="col-12 col-md-6 col-lg-4 mb-4"
+      *ngFor="let angebot of angebote"
+      data-aos="fade-up">
+
+      <div class="card shadow border-0 rounded-4 p-2" style="background-color: #fff;">
+        <img [src]="angebot.image" class="card-img-top rounded-3" alt="{{ angebot.title }}" style="object-fit: cover; height: 250px;">
+
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold mt-3">{{ angebot.title }}</h5>
+
+          <p class="card-text text-muted" [innerHTML]="angebot.description"></p>
+
+          <p class="fw-bold fs-5 mb-3">Ab {{ angebot.pricePerDay }}€ / Tag</p>
+          <p class="text-muted mb-4">Kaution: 150€</p>
+
+          <a href="#" class="btn btn-danger rounded-pill px-4 py-2">{{ angebot.buttonText }}</a>
         </div>
       </div>
+
     </div>
   </div>
 </div>

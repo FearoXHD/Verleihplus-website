@@ -13,7 +13,8 @@ export class ProductsComponent {
     { title: 'Motorradanhänger', 
       description: 'Ideal für den sicheren Transport deines Bikes. Hydraulisch absenkbar und mit Sicherungspunkten.', 
       image: 'assets/IMG_7039.jpg', 
-      pricePerDay: 35 
+      pricePerDay: 35,
+      buttonText: 'Jetzt Anfragen',
     }
   ];
 
