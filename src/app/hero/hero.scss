@@ -1,0 +1,16 @@
+html, body, app-root, .carousel, .carousel-inner, .carousel-item, .carousel-item img {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  filter: brightness(0.7);
+}
+
+.carousel-item {
+  transition: opacity 1s ease-in-out;
+}
