@@ -1,14 +1,14 @@
-<div class="container my-5">
-  <h2>Unsere Produkte</h2>
-  <div class="row">
-    <div class="col-md-4 mb-4" *ngFor="let product of products">
+<div class="container py-5 text-center">
+  <h2 class="mb-4 my-5">Unsere Angebote</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-4 mb-3" *ngFor="let angebot of angebote">
       <div class="card h-100">
-        <img [src]="product.image" class="card-img-top" alt="{{product.name}}">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">{{product.name}}</h5>
-          <p class="card-text">{{product.description}}</p>
-          <p class="fw-bold">{{product.pricePerDay}} € / Tag</p>
-          <a [routerLink]="['/products', product.id]" class="btn btn-primary mt-auto">Details</a>
+        <img [src]="angebot.image" class="card-img-top" [alt]="angebot.title" style="object-fit: cover; height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">{{ angebot.title }}</h5>
+          <p class="card-text">{{ angebot.description }}</p>
+          <p class="card-text"><strong>Ab {{ angebot.pricePerDay | currency:'EUR':'symbol' }} / Tag</strong></p>
+          <button class="btn btn-danger btn-lg mt-3" (click)="scrollTo('angebote')">Jetzt Anfragen</button>
         </div>
       </div>
     </div>

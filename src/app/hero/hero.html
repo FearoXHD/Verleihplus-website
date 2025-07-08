@@ -1,22 +1,13 @@
-<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" style="height: 100vh;">
-  <div class="carousel-inner h-100">
+<div style="height: 100vh; overflow: hidden; position: relative;">
+  <div *ngFor="let image of images; let i = index"
+       [class.active]="i === activeIndex"
+       class="carousel-image position-absolute top-0 start-0 w-100 h-100">
+    <img [src]="image.src" [alt]="image.alt" class="w-100 h-100" style="object-fit: cover; filter: brightness(60%);">
+  </div>
 
-    <div 
-      class="carousel-item h-100"
-      *ngFor="let image of images; let i = index"
-      [class.active]="i === 0">
-
-      <img 
-        [src]="image.src" 
-        class="d-block w-100 h-100" 
-        style="object-fit: cover;" 
-        [alt]="image.alt">
-
-      <div class="container position-absolute text-center text-white top-50 start-50 translate-middle">
-        <h2 class="fs-1 fw-bold">Dein Motorrad. Dein Weg.</h2>
-        <p class="fs-4">Miete jetzt einfach und günstig unseren Motorradanhänger!</p>
-        <button class="btn btn-danger btn-lg" routerLink="/angebote">Angebot ansehen</button>
-      </div>
-    </div>
+  <div class="container position-absolute text-center text-white top-50 start-50 translate-middle">
+    <h2 class="fs-1 fw-bold">Dein Motorrad. Dein Weg.</h2>
+    <p class="fs-4">Miete jetzt einfach und günstig unseren Motorradanhänger!</p>
+    <button class="btn btn-danger btn-lg mt-3" (click)="scrollTo('angebote')">Angebot ansehen</button>
   </div>
 </div>
