@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-products',
   standalone: true,
   templateUrl: './products.html',
-  styleUrl: './products.scss',
-  imports: [NgFor]
+  styleUrls: ['./products.scss'],
+  imports: [CommonModule]
 })
 export class ProductsComponent {
   angebote = [
