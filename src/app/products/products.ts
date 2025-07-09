@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { CurrencyPipe, NgFor } from '@angular/common';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-products',
   standalone: true,
   templateUrl: './products.html',
   styleUrl: './products.scss',
-  imports: [NgFor, CurrencyPipe]
+  imports: [NgFor]
 })
 export class ProductsComponent {
   angebote = [

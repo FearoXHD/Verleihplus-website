@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
-  imports: [],
   templateUrl: './contact.html',
-  styleUrl: './contact.scss'
+  standalone: true,
+  imports: [FormsModule],
 })
 export class Contact {
-
+  onSubmit() {
+    alert('Formular wurde abgesendet!');
+  }
 }
