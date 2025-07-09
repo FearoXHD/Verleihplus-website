@@ -4,26 +4,26 @@
   <div class="row justify-content-center">
     <div class="col-12 col-md-8 col-lg-6">
       <div class="card shadow border-0 rounded-4 p-4">
-        <form (ngSubmit)="onSubmit()" #kontaktForm="ngForm">
-
+        
+        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
           <div class="mb-3">
             <label for="name" class="form-label fw-bold">Name</label>
-            <input type="text" id="name" class="form-control" name="name" required>
+            <input type="text" id="name" class="form-control" name="name" ngModel required>
           </div>
 
           <div class="mb-3">
             <label for="email" class="form-label fw-bold">E-Mail</label>
-            <input type="email" id="email" class="form-control" name="email" required>
+            <input type="email" id="email" class="form-control" name="email" ngModel required>
           </div>
 
           <div class="mb-3">
             <label for="message" class="form-label fw-bold">Nachricht</label>
-            <textarea id="message" class="form-control" name="message" rows="5" required></textarea>
+            <textarea id="message" class="form-control" name="message" ngModel rows="5" required></textarea>
           </div>
 
           <button type="submit" class="btn btn-danger rounded-pill w-100">Absenden</button>
-
         </form>
+
       </div>
     </div>
   </div>
@@ -51,12 +51,15 @@
     <div class="mb-3">
       ✉️ <a href="mailto:info&#64;verleihplus.de" class="text-danger text-decoration-none fw-semibold">info&#64;verleihplus.de</a>
     </div>
+    <div class="mb-3">
+      ☎️ <a href="tel:+4915560988669" class="text-danger text-decoration-none fw-semibold">+49 155 60988669</a>
+    </div>
 
     <div class="mb-3">
-      <a href="https://wa.me/4915123456789" target="_blank">
+      <a href="https://wa.me/+4915560988669" target="_blank">
         <img src="assets/whatsapp-icon.png" alt="WhatsApp Icon" style="width: 50px;">
       </a>
-      <a href="" target="_blank"><img src="assets/kleinanzeigen-icon.png" alt="Kleinanzeigen Icon" style="width: 45px;"></a>
+      <a href="https://www.kleinanzeigen.de/s-anzeige/motorradanhaenger-hydraulisch-mit-100er-zulassung-zu-vermieten/3083576900-276-4931" target="_blank"><img src="assets/kleinanzeigen-icon.png" alt="Kleinanzeigen Icon" style="width: 45px;"></a>
     </div>
 
   </div>

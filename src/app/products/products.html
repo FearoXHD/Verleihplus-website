@@ -18,7 +18,7 @@
           <p class="fw-bold fs-5 mb-3">Ab {{ angebot.pricePerDay}}€ / Tag</p>
           <p class="text-muted mb-4">Kaution: 150€</p>
 
-          <a href="#" class="btn btn-danger rounded-pill px-4 py-2">{{ angebot.buttonText }}</a>
+          <a class="btn btn-danger rounded-pill px-4 py-2" (click)="scrollTo('contact')">{{ angebot.buttonText }}</a>
         </div>
       </div>
 
