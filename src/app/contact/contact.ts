@@ -11,4 +11,8 @@ export class Contact {
   onSubmit() {
     alert('Formular wurde abgesendet!');
   }
+
+  scrollTo(target: string) {
+  document.getElementById(target)?.scrollIntoView({ behavior: 'smooth' });
+}
 }
