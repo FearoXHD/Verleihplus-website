@@ -1,5 +1,5 @@
 <div class="container my-5">
-  <h2 class="text-center mb-4 fw-bold">Unser Anhänger</h2>
+  <h2 class="text-center mb-4 fw-bold">Unsere Produkte</h2>
 
   <div class="row justify-content-center">
     <div 
@@ -15,10 +15,10 @@
 
           <p class="card-text text-muted" [innerHTML]="angebot.description"></p>
 
-          <p class="fw-bold fs-5 mb-3">Ab {{ angebot.pricePerDay}}€ / Tag</p>
-          <p class="text-muted mb-4">Kaution: 150€</p>
+          <p class="fw-bold fs-5 mb-3">Ab {{ angebot.price}}</p>
+          <p class="text-muted mb-4">{{ angebot.details }}</p>
 
-          <a class="btn btn-danger rounded-pill px-4 py-2" (click)="scrollTo('contact')">{{ angebot.buttonText }}</a>
+          <a class="btn btn-danger rounded px-4 py-2" (click)="scrollTo('contact')">{{ angebot.buttonText }}</a>
         </div>
       </div>
 
