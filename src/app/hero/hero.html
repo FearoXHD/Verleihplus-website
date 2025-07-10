@@ -1,0 +1,13 @@
+<div style="height: 100vh; overflow: hidden; position: relative;">
+  <div *ngFor="let image of images; let i = index"
+       [class.active]="i === activeIndex"
+       class="carousel-image position-absolute top-0 start-0 w-100 h-100">
+    <img [src]="image.src" [alt]="image.alt" class="w-100 h-100" style="object-fit: cover; filter: brightness(60%);">
+  </div>
+
+  <div class="container position-absolute text-center text-white top-50 start-50 translate-middle">
+    <h2 class="fs-1 fw-bold">Warum kaufen, wenn du’s mieten kannst?</h2>
+    <p class="fs-4">Motorradanhänger, Pavillons und Fahrradträger – bei uns zum fairen Preis.</p>
+    <button class="btn btn-danger btn-lg mt-3" (click)="scrollTo('angebote')">Angebot ansehen</button>
+  </div>
+</div>
